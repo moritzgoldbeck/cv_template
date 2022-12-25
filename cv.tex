@@ -1,0 +1,81 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+% Modern Academic CV Template
+% Moritz Goldbeck <goldbeck@ifo.de>
+% moritz.goldbeck.net
+%
+% this template builds on: 
+% Awesome CV LaTeX Template
+% https://github.com/posquit0/Awesome-CV
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, a4paper]{awesome-cv}
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{cv/}
+
+%%% Override color
+\colorlet{awesome}{darkgray}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+\usepackage{csquotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+\name{\huge}{\huge <Your Name>}
+\address{<111 Your Street>\enskip\cdotp\enskip <City>, <State>-<ZIP>\enskip\cdotp\enskip <Country>}
+\email{<your.email@uni.edu>}
+\mobile{<+1 000 000-0000>} 
+\homepage{<your-homepage.com>}
+\github{<GitHub name>}
+\linkedin{<LinkedIn name>}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Curriculum Vitae\enskip\cdotp\enskip <Your Name>}
+  {Page \thepage/\pageref{LastPage}}
+
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
+\vspace{5pt}
+%%% Import contents
+% (add spacing with \vspace{} to adjust page breaks)
+% (adjust order as needed)
+\import{\sectiondir}{summary.tex}
+\import{\sectiondir}{position.tex}
+\import{\sectiondir}{interests.tex}
+\import{\sectiondir}{education.tex}
+\import{\sectiondir}{visits.tex}
+\import{\sectiondir}{experience.tex}
+\import{\sectiondir}{skills.tex}
+\import{\sectiondir}{ongoing.tex}
+\import{\sectiondir}{publication.tex}
+\import{\sectiondir}{coursework.tex}
+\import{\sectiondir}{presentation.tex}
+\import{\sectiondir}{teaching.tex}
+\import{\sectiondir}{honors.tex}
+
+\end{document}
